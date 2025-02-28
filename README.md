@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fake Store Admin
 
-## Getting Started
+![alt text](https://i.ibb.co/SDQfvSqt/Captura-de-tela-2025-02-28-191731.png)
 
-First, run the development server:
+## Requisitos Funcionais
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+:white_check_mark: O usuário deve ser capaz de listar todos os produtos de forma paginada;
+:white_check_mark: O usuário deve ser capaz de filtrar produtos de uma determinada categoria;
+:white_check_mark: O usuário deve ser capaz de ordenar os produtos por preço;
+:white_check_mark: O nome dos produtos não podem ter mais que 30 caracteres;
+:white_check_mark: Produtos com o rate acima de 4.5 devem ser listado com prioridade/destaque;
+:white_check_mark: Durante o processo de atualização, o usuário não deve ser capaz de alterar a categoria de um produto;
+:white_check_mark: O usuário deve ser capaz de visualizar os dados de um produto de forma individual;
+:white_check_mark: A exclusão de produtos não deve ser permitida de forma imediata, o usuário deve confirmar a ação;
+
+## Tecnologias utilizadas
+
+:white_check_mark: Next.js;
+:white_check_mark: Zustand;
+:white_check_mark: Zod;
+:white_check_mark: Jest;
+:white_check_mark: Storybook;
+:white_check_mark: Material UI;
+
+## Cobertura dos testes
+
+:white_check_mark: 33.61%;
+![alt text](https://i.ibb.co/hRFCz3tM/Captura-de-tela-2025-02-28-191615.png)
+
+## Como executar o projeto
+
+Após clonar o repositório, na raíz do projeto execute o seguinte comando no seu terminal para instalar as dependências do projeto:
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Execute o seguinte comando para iniciar o projeto:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Testes
 
-## Learn More
+Execute o seguinte comando para executar os testes unitários:
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Storybook
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Execute o seguinte comando para executar o storybook:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+npm run storybook
+```
