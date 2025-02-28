@@ -10,7 +10,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "jest --coverage",
-    "cypress": "cypress open",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -46,7 +45,6 @@
     "@types/react-dom": "^19",
     "@types/storybook__react": "^4.0.2",
     "axios-mock-adapter": "^2.1.0",
-    "cypress": "^14.1.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "eslint-plugin-jest": "^28.11.0",
