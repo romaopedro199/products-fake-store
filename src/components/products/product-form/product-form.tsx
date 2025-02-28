@@ -36,6 +36,7 @@ const ProductForm = ({ product }: { product?: Product }) => {
             label="Name"
             error={!!errors.title}
             helperText={errors.title?.message}
+            sx={{ label: { color: "text.primary" } }}
           />
         )}
       />
@@ -50,6 +51,7 @@ const ProductForm = ({ product }: { product?: Product }) => {
             label="Category"
             error={!!errors.category}
             helperText={errors.category?.message}
+            sx={{ label: { color: "text.primary" } }}
           >
             {categories.map((cat) => (
               <MenuItem key={cat} value={cat}>
@@ -70,6 +72,7 @@ const ProductForm = ({ product }: { product?: Product }) => {
             error={!!errors.price}
             helperText={errors.price?.message}
             onChange={(e) => field.onChange(Number(e.target.value))}
+            sx={{ label: { color: "text.primary" } }}
           />
         )}
       />
@@ -82,6 +85,7 @@ const ProductForm = ({ product }: { product?: Product }) => {
             label="Image URL"
             error={!!errors.image}
             helperText={errors.image?.message}
+            sx={{ label: { color: "text.primary" } }}
           />
         )}
       />
