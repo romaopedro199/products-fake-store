@@ -21,6 +21,7 @@
 :white_check_mark: Jest;
 :white_check_mark: Storybook;
 :white_check_mark: Material UI;
+:white_check_mark: Husky;
 
 ## Cobertura dos testes
 
