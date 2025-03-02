@@ -13,6 +13,16 @@ export const productStorage = {
     }
   },
 
+  async getProduct(id: number): Promise<Product | null> {
+    try {
+      const { data: product } = await axios.get(`${API_URL}/${id}`);
+      return product;
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
+  },
+
   async createProduct(
     newProduct: Omit<Product, "id">
   ): Promise<Product | null> {

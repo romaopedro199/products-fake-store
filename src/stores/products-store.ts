@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import { api } from "@/services/api";
 import { formatProductsList } from "@/utils/format-products-list";
 import { INITIAL_PAGE } from "@/constants/products";
 import { getTotalProductsByCategory } from "@/utils/get-total-products-by-category";
@@ -18,7 +17,7 @@ export const useProductStore = create<ProductStore>((set) => ({
   fetchProducts: async () => {
     set({ loading: true });
     try {
-      const { data } = await api.get("/products");
+      const data = await productStorage.getAllProducts();
 
       set(({ category, sort, page, featuredFirst }) => {
         const totalProducts = getTotalProductsByCategory({
@@ -58,6 +57,17 @@ export const useProductStore = create<ProductStore>((set) => ({
   setSort: (sort) => set({ sort, page: INITIAL_PAGE }),
   setFeaturedFirst: (featuredFirst) =>
     set({ featuredFirst, page: INITIAL_PAGE }),
+  fetchProduct: async (id: number) => {
+    set({ loading: true });
+    try {
+      const data = await productStorage.getProduct(id);
+      return data;
+    } catch (error) {
+      if (error) set({ customError: "Something went wrong" });
+    } finally {
+      set({ loading: false });
+    }
+  },
   addProduct: async (newProduct) => {
     set({ loading: true });
     try {

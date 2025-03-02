@@ -1,4 +1,5 @@
 "use client";
+import ProductFormPlaceholder from "@/components/products/product-form/placeholder";
 import ProductForm from "@/components/products/product-form/product-form";
 import { useProduct } from "@/hooks/use-product";
 import { Container } from "@mui/material";
@@ -12,11 +13,13 @@ export default function ProductDetailPage({
   const { id } = use(params);
   const { product } = useProduct(Number(id));
 
-  if (!product) return null;
-
   return (
     <Container>
-      <ProductForm product={product} />
+      {!product ? (
+        <ProductFormPlaceholder />
+      ) : (
+        <ProductForm product={product} />
+      )}
     </Container>
   );
 }

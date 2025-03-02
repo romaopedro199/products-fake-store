@@ -4,6 +4,7 @@ import { Controller } from "react-hook-form";
 import ButtonHover from "@/components/common/button-hover";
 import DeleteButton from "@/components/products/delete-button";
 import { useProductForm } from "@/hooks/use-product-form";
+import ProductFormPlaceholder from "./placeholder";
 
 const categories = [
   "electronics",
@@ -15,6 +16,8 @@ const categories = [
 const ProductForm = ({ product }: { product?: Product }) => {
   const { onSubmit, errors, handleSubmit, control, loading } =
     useProductForm(product);
+
+  if (loading) return <ProductFormPlaceholder />;
 
   return (
     <Box

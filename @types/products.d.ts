@@ -26,6 +26,7 @@ type ProductStore = {
   page: Page;
   totalProducts: TotalProducts;
   fetchProducts: () => Promise<void>;
+  fetchProduct: (param: number) => Promise<Product | null | undefined>;
   setPage: (page: page) => void;
   setCategory: (category: Category) => void;
   setSort: (sort: Sort) => void;
