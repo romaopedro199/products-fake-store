@@ -12,8 +12,8 @@
 
 ## Cobertura dos testes
 
-:white_check_mark: 33.61%;<br />
-![alt text](https://i.ibb.co/hRFCz3tM/Captura-de-tela-2025-02-28-191615.png)
+:white_check_mark: 40.22%;<br />
+![alt text](https://i.ibb.co/rDTxcss/Captura-de-tela-2025-03-02-103956.png)
 
 ## Como executar o projeto
 
